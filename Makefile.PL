@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-
+use 5.010;
 
 use ExtUtils::MakeMaker;
 
@@ -18,8 +18,11 @@ my %WriteMakefileArgs = (
   "DISTNAME" => "Try-Tiny-Except",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
+  "MIN_PERL_VERSION" => "5.010",
   "NAME" => "Try::Tiny::Except",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "Try::Tiny" => "0.22"
+  },
   "VERSION" => "0.01",
   "test" => {
     "TESTS" => "t/*.t"
@@ -28,7 +31,8 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "ExtUtils::MakeMaker" => 0
+  "ExtUtils::MakeMaker" => 0,
+  "Try::Tiny" => "0.22"
 );
 
 

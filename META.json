@@ -34,6 +34,12 @@
             "Dist::Milla" : "v1.0.9",
             "Test::Pod" : "1.41"
          }
+      },
+      "runtime" : {
+         "requires" : {
+            "Try::Tiny" : "0.22",
+            "perl" : "5.010"
+         }
       }
    },
    "release_status" : "stable",
